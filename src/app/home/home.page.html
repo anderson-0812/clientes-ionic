@@ -1,7 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <!-- Botones flotantes -->
+    Ir a Clientes 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +13,12 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-fab vertical="ion-fab-button" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" (click)="irAclientes()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
   <div id="container">
     <strong>Ready to create an app?</strong>

@@ -1,9 +1,47 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>cliente-detalle</ion-title>
+  <ion-toolbar color="secondary">
+    <!-- slot="start" sirv para alinear antes del nombre el btn  -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref = "/clientes">
+
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ cliente.nombres}} {{ cliente.apellidos}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color = "danger" (click)="eliminarLugar()">
+          <ion-icon name="trash-outline" class="btn-danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid class="ion-no-padding">
 
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{ cliente.cedula }}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{ cliente.telefono }}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{ cliente.direccion }}</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{ cliente.email }}</h1>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>

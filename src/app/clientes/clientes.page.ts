@@ -25,7 +25,7 @@ export class ClientesPage implements OnInit {
   }
 
   agregarCliente(){
-    console.log('Crear lugar');
+    console.log('Crear Cliente');
     this.router.navigate(['/cliente-add']);
   }
 
