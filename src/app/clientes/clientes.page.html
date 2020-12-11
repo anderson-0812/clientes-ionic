@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>clientes</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Clientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+<!--<div *ngFor="let lugar of places">
+{{lugar.title}}
+</div>-->
+<ion-list>
+  <ion-item *ngFor="let cliente of clientes" [routerLink]="['/clientes', cliente.id]">
+    <ion-label>
+      {{cliente.nombres}}
+      {{cliente.apellidos}}
+    </ion-label>
+  </ion-item>
+
+</ion-list>
+
+<!-- Botones flotantes -->
+<ion-fab vertical="ion-fab-button" horizontal="end" slot="fixed">
+  <ion-fab-button color="danger" (click)="agregarLugar()">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 </ion-content>
